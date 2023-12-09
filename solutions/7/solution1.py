@@ -6,24 +6,6 @@ CARD_INDEX = [k for k in CARD_TYPES]
 
 import functools
 
-# def compare(hand1, hand2):
-#     l1 = match(hand1)
-#     l2 = match(hand2)
-#     t1 = get_type(l1)
-#     t2 = get_type(l2)
-#     print(t1, t2, l1, l2)
-#     if t1 == t2:
-#         for x, y in zip(l1, l2):
-#             if x > y:
-#                 return hand1
-#             if y < x:
-#                 return hand2
-#         raise Exception("...")
-#     elif t1 > t2:
-#         return t1
-#     else:
-#         return t2
-
 def get_score(counts):
     score = 0
     for i, c in enumerate(counts):
@@ -32,36 +14,19 @@ def get_score(counts):
 
     return score
 
-
-
-
 def compare(hand1, hand2):
     l1 = match(hand1)
     l2 = match(hand2)
     t1 = get_type(l1)
     t2 = get_type(l2)
-    # print(t1, l1)
-    # print(t2, l2)
+    
     if t1 == t2:
-        # s1 = get_score(l1)
-        # s2 = get_score(l2)
-        # if s1 < s2:
-        #     return 1
-        # else:
-        #     return -1
-
-        #return  < get_score(l1)
-        # for x, y in zip(l1, l2):
-        #     if x < y:
-        #         return 1
-        #     if y > x:
-        #         return -1
         for x, y in zip(hand1, hand2):
             if CARD_TYPES.index(str(x)) < CARD_TYPES.index(str(y)):
                 return 1
             if CARD_TYPES.index(x) > CARD_TYPES.index(y):
                 return -1
-        # raise Exception("...")
+
     elif t1 < t2:
         return 1
     else:
