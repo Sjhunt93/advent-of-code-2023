@@ -39,10 +39,10 @@ def is_valid(seq, numbers):
     return True
 
 
-# token = "???.###????.###????.###????.###????.### 1,1,3,1,1,3,1,1,3,1,1,3,1,1,3"
-# seq, numbers = token.split(" ")
-# numbers = numbers.split(",")
-# print(variations(seq, tuple(numbers)))
+token = "????.######..#####. 1,6,5"
+seq, numbers = token.split(" ")
+numbers = numbers.split(",")
+print(variations(seq, tuple(numbers)))
 
 with open("data.txt") as f:
     lines = f.read().split("\n")
