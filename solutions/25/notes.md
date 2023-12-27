@@ -1,0 +1,1 @@
+https://www.reddit.com/r/adventofcode/comments/18qntwl/what_have_you_learned_this_year/
